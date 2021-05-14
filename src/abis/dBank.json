@@ -2,9 +2,34 @@
   "contractName": "dBank",
   "abi": [
     {
-      "inputs": [],
+      "inputs": [
+        {
+          "internalType": "contract aliToken",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
       "stateMutability": "nonpayable",
       "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "etherBalanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
     },
     {
       "inputs": [],
@@ -35,44 +60,44 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"borrow\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"payOff\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ali.yilmaz/Projects (GitHub)/ali-token/src/contracts/dBank.sol\":\"dBank\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ali.yilmaz/Projects (GitHub)/ali-token/src/contracts/aliToken.sol\":{\"keccak256\":\"0x2b465c02d2a95e6e76d7bffe361286b5e2e50492c03920795f91fd297533e326\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2cfa4040cd6cdb99d80a12726ed3923c8c4d72afa186a800be44f5360a927bdb\",\"dweb:/ipfs/QmTFq2uUJLCaMHrCfqnrQRjViFN9HBRLRboeVHhkntrqh8\"]},\"/Users/ali.yilmaz/Projects (GitHub)/ali-token/src/contracts/dBank.sol\":{\"keccak256\":\"0xb0fc0759cdc21055355d513c5d3c7b88e6a9552e1cf1d84731a6c3f1941a3e38\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3106221529f360561c35319537ee64ec86aeaec2cc5c4f7fe08eaefa39d2e52f\",\"dweb:/ipfs/Qme8SFJmmNxbrfiUayrLt7Ts2qgze3R7oGtVjh7xPYHqrd\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x3b21f2c8d626de3b9925ae33e972d8bf5c8b1bffb3f4ee94daeed7d0679036e6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7f8d45329fecbf0836ad7543330c3ecd0f8d0ffa42d4016278c3eb2215fdcdfe\",\"dweb:/ipfs/QmXWLT7GcnHtA5NiD6MFi2CV3EWJY4wv5mLNnypqYDrxL3\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0xcbd85c86627a47fd939f1f4ee3ba626575ff2a182e1804b29f5136394449b538\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://53c6a80c519bb9356aad28efa9a1ec31603860eb759d2dc57f545fcae1dd1aca\",\"dweb:/ipfs/QmfRS6TtMNUHhvgLHXK21qKNnpn2S7g2Yd1fKaHKyFiJsR\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060b58061001f6000396000f3fe608060405260043610603a5760003560e01c80633ccfd60b14603f5780633fac68d5146053578063d0e30db0146067578063e68d356914606f575b600080fd5b348015604a57600080fd5b5060516077565b005b348015605e57600080fd5b5060656079565b005b606d607b565b005b6075607d565b005b565b565b565b56fea264697066735822122021afc31060373d00e7af710b689ec1e2c81a96e45606fed352547c2db93a543f64736f6c63430007060033",
-  "deployedBytecode": "0x608060405260043610603a5760003560e01c80633ccfd60b14603f5780633fac68d5146053578063d0e30db0146067578063e68d356914606f575b600080fd5b348015604a57600080fd5b5060516077565b005b348015605e57600080fd5b5060656079565b005b606d607b565b005b6075607d565b005b565b565b565b56fea264697066735822122021afc31060373d00e7af710b689ec1e2c81a96e45606fed352547c2db93a543f64736f6c63430007060033",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract aliToken\",\"name\":\"_token\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"borrow\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"etherBalanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"payOff\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ali.yilmaz/Projects (GitHub)/ali-token/src/contracts/dBank.sol\":\"dBank\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ali.yilmaz/Projects (GitHub)/ali-token/src/contracts/aliToken.sol\":{\"keccak256\":\"0x2b465c02d2a95e6e76d7bffe361286b5e2e50492c03920795f91fd297533e326\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2cfa4040cd6cdb99d80a12726ed3923c8c4d72afa186a800be44f5360a927bdb\",\"dweb:/ipfs/QmTFq2uUJLCaMHrCfqnrQRjViFN9HBRLRboeVHhkntrqh8\"]},\"/Users/ali.yilmaz/Projects (GitHub)/ali-token/src/contracts/dBank.sol\":{\"keccak256\":\"0x1e10861b7046a086b7b37d82c5ad36eb5ccb507a0f1b365e69ac4fbb42f3a72b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://81a82b1ae1abd09bfe2b7b5958ca9ac931015282399071efd8480414110039ae\",\"dweb:/ipfs/QmbN1qqysKLQ7mSvs786mqsfH98PndS8geTPWDroyNUwHJ\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x3b21f2c8d626de3b9925ae33e972d8bf5c8b1bffb3f4ee94daeed7d0679036e6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7f8d45329fecbf0836ad7543330c3ecd0f8d0ffa42d4016278c3eb2215fdcdfe\",\"dweb:/ipfs/QmXWLT7GcnHtA5NiD6MFi2CV3EWJY4wv5mLNnypqYDrxL3\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0xcbd85c86627a47fd939f1f4ee3ba626575ff2a182e1804b29f5136394449b538\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://53c6a80c519bb9356aad28efa9a1ec31603860eb759d2dc57f545fcae1dd1aca\",\"dweb:/ipfs/QmfRS6TtMNUHhvgLHXK21qKNnpn2S7g2Yd1fKaHKyFiJsR\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516102653803806102658339818101604052602081101561003357600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506101d1806100946000396000f3fe60806040526004361061004a5760003560e01c8063179fc99f1461004f5780633ccfd60b146100b45780633fac68d5146100cb578063d0e30db0146100e2578063e68d3569146100ec575b600080fd5b34801561005b57600080fd5b5061009e6004803603602081101561007257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100f6565b6040518082815260200191505060405180910390f35b3480156100c057600080fd5b506100c961010e565b005b3480156100d757600080fd5b506100e0610110565b005b6100ea610112565b005b6100f4610199565b005b60016020528060005260406000206000915090505481565b565b565b34600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205401600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550565b56fea2646970667358221220b594650ffb4497d331ff1b57af64a0037079c61108ac21a87ab50eb9ab212c0764736f6c63430007060033",
+  "deployedBytecode": "0x60806040526004361061004a5760003560e01c8063179fc99f1461004f5780633ccfd60b146100b45780633fac68d5146100cb578063d0e30db0146100e2578063e68d3569146100ec575b600080fd5b34801561005b57600080fd5b5061009e6004803603602081101561007257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100f6565b6040518082815260200191505060405180910390f35b3480156100c057600080fd5b506100c961010e565b005b3480156100d757600080fd5b506100e0610110565b005b6100ea610112565b005b6100f4610199565b005b60016020528060005260406000206000915090505481565b565b565b34600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205401600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550565b56fea2646970667358221220b594650ffb4497d331ff1b57af64a0037079c61108ac21a87ab50eb9ab212c0764736f6c63430007060033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [],
-  "sourceMap": "96:1481:2:-:0;;;255:77;;;;;;;;;;96:1481;;;;;;",
-  "deployedSourceMap": "96:1481:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;649:362;;;;;;;;;;;;;:::i;:::-;;1347:227;;;;;;;;;;;;;:::i;:::-;;338:305;;;:::i;:::-;;1017:324;;;:::i;:::-;;649:362;:::o;1347:227::-;:::o;338:305::-;:::o;1017:324::-;:::o",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.6.0 <0.8.0;\r\n\r\nimport \"./aliToken.sol\";\r\n\r\ncontract dBank {\r\n\r\n  //assign Token contract to variable\r\n\r\n  //add mappings\r\n\r\n  //add events\r\n\r\n  //pass as constructor argument deployed Token contract\r\n  constructor() public {\r\n    //assign token deployed contract to variable\r\n  }\r\n\r\n  function deposit() payable public {\r\n    //check if msg.sender didn't already deposited funds\r\n    //check if msg.value is >= than 0.01 ETH\r\n\r\n    //increase msg.sender ether deposit balance\r\n    //start msg.sender hodling time\r\n\r\n    //set msg.sender deposit status to true\r\n    //emit Deposit event\r\n  }\r\n\r\n  function withdraw() public {\r\n    //check if msg.sender deposit status is true\r\n    //assign msg.sender ether deposit balance to variable for event\r\n\r\n    //check user's hodl time\r\n\r\n    //calc interest per second\r\n    //calc accrued interest\r\n\r\n    //send eth to user\r\n    //send interest in tokens to user\r\n\r\n    //reset depositer data\r\n\r\n    //emit event\r\n  }\r\n\r\n  function borrow() payable public {\r\n    //check if collateral is >= than 0.01 ETH\r\n    //check if user doesn't have active loan\r\n\r\n    //add msg.value to ether collateral\r\n\r\n    //calc tokens amount to mint, 50% of msg.value\r\n\r\n    //mint&send tokens to user\r\n\r\n    //activate borrower's loan status\r\n\r\n    //emit event\r\n  }\r\n\r\n  function payOff() public {\r\n    //check if loan is active\r\n    //transfer tokens from user back to the contract\r\n\r\n    //calc fee\r\n\r\n    //send user's collateral minus fee\r\n\r\n    //reset borrower's data\r\n\r\n    //emit event\r\n  }\r\n}",
+  "sourceMap": "96:1809:1:-:0;;;350:124;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;460:6;451;;:15;;;;;;;;;;;;;;;;;;350:124;96:1809;;;;;;",
+  "deployedSourceMap": "96:1809:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;211:49;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;907:390;;;;;;;;;;;;;:::i;:::-;;1657:245;;;;;;;;;;;;;:::i;:::-;;482:417;;;:::i;:::-;;1305:344;;;:::i;:::-;;211:49;;;;;;;;;;;;;;;;;:::o;907:390::-;:::o;1657:245::-;:::o;482:417::-;707:9;678:14;:26;693:10;678:26;;;;;;;;;;;;;;;;:38;649:14;:26;664:10;649:26;;;;;;;;;;;;;;;:67;;;;482:417::o;1305:344::-;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.6.0 <0.8.0;\r\n\r\nimport \"./aliToken.sol\";\r\n\r\ncontract dBank {\r\n    //assign Token contract to variable\r\n    aliToken private aToken;\r\n\r\n    //add mappings\r\n    mapping(address => uint256) public etherBalanceOf;\r\n\r\n    //add events\r\n\r\n    //pass as constructo r argument deployed Token contract\r\n    constructor(aliToken _token) public {\r\n        //assign token deployed contract to variable\r\n        aToken = _token;\r\n    }\r\n\r\n    function deposit() public payable {\r\n        //check if msg.sender didn't already deposited funds\r\n        //check if msg.value is >= than 0.01 ETH\r\n        \r\n        etherBalanceOf[msg.sender] = etherBalanceOf[msg.sender] + msg.value;\r\n\r\n        //increase msg.sender ether deposit balance\r\n        //start msg.sender hodling time\r\n        //set msg.sender deposit status to true\r\n        //emit Deposit event\r\n    }\r\n\r\n    function withdraw() public {\r\n        //check if msg.sender deposit status is true\r\n        //assign msg.sender ether deposit balance to variable for event\r\n        //check user's hodl time\r\n        //calc interest per second\r\n        //calc accrued interest\r\n        //send eth to user\r\n        //send interest in tokens to user\r\n        //reset depositer data\r\n        //emit event\r\n    }\r\n\r\n    function borrow() public payable {\r\n        //check if collateral is >= than 0.01 ETH\r\n        //check if user doesn't have active loan\r\n        //add msg.value to ether collateral\r\n        //calc tokens amount to mint, 50% of msg.value\r\n        //mint&send tokens to user\r\n        //activate borrower's loan status\r\n        //emit event\r\n    }\r\n\r\n    function payOff() public {\r\n        //check if loan is active\r\n        //transfer tokens from user back to the contract\r\n        //calc fee\r\n        //send user's collateral minus fee\r\n        //reset borrower's data\r\n        //emit event\r\n    }\r\n}\r\n",
   "sourcePath": "/Users/ali.yilmaz/Projects (GitHub)/ali-token/src/contracts/dBank.sol",
   "ast": {
     "absolutePath": "/Users/ali.yilmaz/Projects (GitHub)/ali-token/src/contracts/dBank.sol",
     "exportedSymbols": {
       "Context": [
-        155
+        147
       ],
       "ERC20": [
-        854
+        846
       ],
       "IERC20": [
-        932
+        924
       ],
       "SafeMath": [
-        351
+        343
       ],
       "aliToken": [
-        108
+        75
       ],
       "dBank": [
-        132
+        124
       ]
     },
-    "id": 133,
+    "id": 125,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 110,
+        "id": 77,
         "literals": [
           "solidity",
           ">=",
@@ -83,16 +108,16 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:31:2"
+        "src": "33:31:1"
       },
       {
         "absolutePath": "/Users/ali.yilmaz/Projects (GitHub)/ali-token/src/contracts/aliToken.sol",
         "file": "./aliToken.sol",
-        "id": 111,
+        "id": 78,
         "nodeType": "ImportDirective",
-        "scope": 133,
-        "sourceUnit": 109,
-        "src": "68:24:2",
+        "scope": 125,
+        "sourceUnit": 76,
+        "src": "68:24:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -102,40 +127,415 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 132,
+        "id": 124,
         "linearizedBaseContracts": [
-          132
+          124
         ],
         "name": "dBank",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "body": {
-              "id": 114,
-              "nodeType": "Block",
-              "src": "276:56:2",
-              "statements": []
+            "constant": false,
+            "id": 80,
+            "mutability": "mutable",
+            "name": "aToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 124,
+            "src": "159:23:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_aliToken_$75",
+              "typeString": "contract aliToken"
             },
-            "id": 115,
+            "typeName": {
+              "id": 79,
+              "name": "aliToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 75,
+              "src": "159:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_aliToken_$75",
+                "typeString": "contract aliToken"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "functionSelector": "179fc99f",
+            "id": 84,
+            "mutability": "mutable",
+            "name": "etherBalanceOf",
+            "nodeType": "VariableDeclaration",
+            "scope": 124,
+            "src": "211:49:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 83,
+              "keyType": {
+                "id": 81,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "219:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "211:27:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 82,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "230:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 93,
+              "nodeType": "Block",
+              "src": "386:88:1",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 91,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 89,
+                      "name": "aToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 80,
+                      "src": "451:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_aliToken_$75",
+                        "typeString": "contract aliToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 90,
+                      "name": "_token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 86,
+                      "src": "460:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_aliToken_$75",
+                        "typeString": "contract aliToken"
+                      }
+                    },
+                    "src": "451:15:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_aliToken_$75",
+                      "typeString": "contract aliToken"
+                    }
+                  },
+                  "id": 92,
+                  "nodeType": "ExpressionStatement",
+                  "src": "451:15:1"
+                }
+              ]
+            },
+            "id": 94,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
+              "id": 87,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 86,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 94,
+                  "src": "362:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_aliToken_$75",
+                    "typeString": "contract aliToken"
+                  },
+                  "typeName": {
+                    "id": 85,
+                    "name": "aliToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 75,
+                    "src": "362:8:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_aliToken_$75",
+                      "typeString": "contract aliToken"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "361:17:1"
+            },
+            "returnParameters": {
+              "id": 88,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "386:0:1"
+            },
+            "scope": 124,
+            "src": "350:124:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 110,
+              "nodeType": "Block",
+              "src": "516:383:1",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 108,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 97,
+                        "name": "etherBalanceOf",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 84,
+                        "src": "649:14:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 100,
+                      "indexExpression": {
+                        "expression": {
+                          "id": 98,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967281,
+                          "src": "664:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 99,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "664:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "649:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 107,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "baseExpression": {
+                          "id": 101,
+                          "name": "etherBalanceOf",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 84,
+                          "src": "678:14:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                            "typeString": "mapping(address => uint256)"
+                          }
+                        },
+                        "id": 104,
+                        "indexExpression": {
+                          "expression": {
+                            "id": 102,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4294967281,
+                            "src": "693:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 103,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "693:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "678:26:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "expression": {
+                          "id": 105,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967281,
+                          "src": "707:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 106,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "src": "707:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "678:38:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "649:67:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 109,
+                  "nodeType": "ExpressionStatement",
+                  "src": "649:67:1"
+                }
+              ]
+            },
+            "functionSelector": "d0e30db0",
+            "id": 111,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "498:2:1"
+            },
+            "returnParameters": {
+              "id": 96,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "516:0:1"
+            },
+            "scope": 124,
+            "src": "482:417:1",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 114,
+              "nodeType": "Block",
+              "src": "934:363:1",
+              "statements": []
+            },
+            "functionSelector": "3ccfd60b",
+            "id": 115,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
               "id": 112,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "266:2:2"
+              "src": "924:2:1"
             },
             "returnParameters": {
               "id": 113,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "276:0:2"
+              "src": "934:0:1"
             },
-            "scope": 132,
-            "src": "255:77:2",
+            "scope": 124,
+            "src": "907:390:1",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
@@ -144,30 +544,30 @@
             "body": {
               "id": 118,
               "nodeType": "Block",
-              "src": "372:271:2",
+              "src": "1338:311:1",
               "statements": []
             },
-            "functionSelector": "d0e30db0",
+            "functionSelector": "e68d3569",
             "id": 119,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
-            "name": "deposit",
+            "name": "borrow",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 116,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "354:2:2"
+              "src": "1320:2:1"
             },
             "returnParameters": {
               "id": 117,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "372:0:2"
+              "src": "1338:0:1"
             },
-            "scope": 132,
-            "src": "338:305:2",
+            "scope": 124,
+            "src": "1305:344:1",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "public"
@@ -176,126 +576,62 @@
             "body": {
               "id": 122,
               "nodeType": "Block",
-              "src": "676:335:2",
-              "statements": []
-            },
-            "functionSelector": "3ccfd60b",
-            "id": 123,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "withdraw",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 120,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "666:2:2"
-            },
-            "returnParameters": {
-              "id": 121,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "676:0:2"
-            },
-            "scope": 132,
-            "src": "649:362:2",
-            "stateMutability": "nonpayable",
-            "virtual": false,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 126,
-              "nodeType": "Block",
-              "src": "1050:291:2",
-              "statements": []
-            },
-            "functionSelector": "e68d3569",
-            "id": 127,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "borrow",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 124,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "1032:2:2"
-            },
-            "returnParameters": {
-              "id": 125,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "1050:0:2"
-            },
-            "scope": 132,
-            "src": "1017:324:2",
-            "stateMutability": "payable",
-            "virtual": false,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 130,
-              "nodeType": "Block",
-              "src": "1372:202:2",
+              "src": "1682:220:1",
               "statements": []
             },
             "functionSelector": "3fac68d5",
-            "id": 131,
+            "id": 123,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "payOff",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 128,
+              "id": 120,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1362:2:2"
+              "src": "1672:2:1"
             },
             "returnParameters": {
-              "id": 129,
+              "id": 121,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1372:0:2"
+              "src": "1682:0:1"
             },
-            "scope": 132,
-            "src": "1347:227:2",
+            "scope": 124,
+            "src": "1657:245:1",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 133,
-        "src": "96:1481:2"
+        "scope": 125,
+        "src": "96:1809:1"
       }
     ],
-    "src": "33:1544:2"
+    "src": "33:1874:1"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/Users/ali.yilmaz/Projects (GitHub)/ali-token/src/contracts/dBank.sol",
       "exportedSymbols": {
         "Context": [
-          155
+          147
         ],
         "ERC20": [
-          854
+          846
         ],
         "IERC20": [
-          932
+          924
         ],
         "SafeMath": [
-          351
+          343
         ],
         "aliToken": [
-          108
+          75
         ],
         "dBank": [
-          132
+          124
         ]
       },
       "license": "MIT"
@@ -313,24 +649,24 @@
             ".0"
           ]
         },
-        "id": 110,
+        "id": 77,
         "name": "PragmaDirective",
-        "src": "33:31:2"
+        "src": "33:31:1"
       },
       {
         "attributes": {
-          "SourceUnit": 109,
+          "SourceUnit": 76,
           "absolutePath": "/Users/ali.yilmaz/Projects (GitHub)/ali-token/src/contracts/aliToken.sol",
           "file": "./aliToken.sol",
-          "scope": 133,
+          "scope": 125,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 111,
+        "id": 78,
         "name": "ImportDirective",
-        "src": "68:24:2"
+        "src": "68:24:1"
       },
       {
         "attributes": {
@@ -344,12 +680,85 @@
           "contractKind": "contract",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            132
+            124
           ],
           "name": "dBank",
-          "scope": 133
+          "scope": 125
         },
         "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "aToken",
+              "scope": 124,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract aliToken",
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "aliToken",
+                  "referencedDeclaration": 75,
+                  "type": "contract aliToken"
+                },
+                "id": 79,
+                "name": "UserDefinedTypeName",
+                "src": "159:8:1"
+              }
+            ],
+            "id": 80,
+            "name": "VariableDeclaration",
+            "src": "159:23:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "179fc99f",
+              "mutability": "mutable",
+              "name": "etherBalanceOf",
+              "scope": 124,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => uint256)",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => uint256)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 81,
+                    "name": "ElementaryTypeName",
+                    "src": "219:7:1"
+                  },
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 82,
+                    "name": "ElementaryTypeName",
+                    "src": "230:7:1"
+                  }
+                ],
+                "id": 83,
+                "name": "Mapping",
+                "src": "211:27:1"
+              }
+            ],
+            "id": 84,
+            "name": "VariableDeclaration",
+            "src": "211:49:1"
+          },
           {
             "attributes": {
               "implemented": true,
@@ -359,7 +768,357 @@
                 null
               ],
               "name": "",
-              "scope": 132,
+              "scope": 124,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_token",
+                      "scope": 94,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract aliToken",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "aliToken",
+                          "referencedDeclaration": 75,
+                          "type": "contract aliToken"
+                        },
+                        "id": 85,
+                        "name": "UserDefinedTypeName",
+                        "src": "362:8:1"
+                      }
+                    ],
+                    "id": 86,
+                    "name": "VariableDeclaration",
+                    "src": "362:15:1"
+                  }
+                ],
+                "id": 87,
+                "name": "ParameterList",
+                "src": "361:17:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 88,
+                "name": "ParameterList",
+                "src": "386:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract aliToken"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 80,
+                              "type": "contract aliToken",
+                              "value": "aToken"
+                            },
+                            "id": 89,
+                            "name": "Identifier",
+                            "src": "451:6:1"
+                          },
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 86,
+                              "type": "contract aliToken",
+                              "value": "_token"
+                            },
+                            "id": 90,
+                            "name": "Identifier",
+                            "src": "460:6:1"
+                          }
+                        ],
+                        "id": 91,
+                        "name": "Assignment",
+                        "src": "451:15:1"
+                      }
+                    ],
+                    "id": 92,
+                    "name": "ExpressionStatement",
+                    "src": "451:15:1"
+                  }
+                ],
+                "id": 93,
+                "name": "Block",
+                "src": "386:88:1"
+              }
+            ],
+            "id": 94,
+            "name": "FunctionDefinition",
+            "src": "350:124:1"
+          },
+          {
+            "attributes": {
+              "functionSelector": "d0e30db0",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "deposit",
+              "scope": 124,
+              "stateMutability": "payable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 95,
+                "name": "ParameterList",
+                "src": "498:2:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 96,
+                "name": "ParameterList",
+                "src": "516:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 84,
+                                  "type": "mapping(address => uint256)",
+                                  "value": "etherBalanceOf"
+                                },
+                                "id": 97,
+                                "name": "Identifier",
+                                "src": "649:14:1"
+                              },
+                              {
+                                "attributes": {
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 4294967281,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 98,
+                                    "name": "Identifier",
+                                    "src": "664:3:1"
+                                  }
+                                ],
+                                "id": 99,
+                                "name": "MemberAccess",
+                                "src": "664:10:1"
+                              }
+                            ],
+                            "id": 100,
+                            "name": "IndexAccess",
+                            "src": "649:26:1"
+                          },
+                          {
+                            "attributes": {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "+",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 84,
+                                      "type": "mapping(address => uint256)",
+                                      "value": "etherBalanceOf"
+                                    },
+                                    "id": 101,
+                                    "name": "Identifier",
+                                    "src": "678:14:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "sender",
+                                      "type": "address payable"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 4294967281,
+                                          "type": "msg",
+                                          "value": "msg"
+                                        },
+                                        "id": 102,
+                                        "name": "Identifier",
+                                        "src": "693:3:1"
+                                      }
+                                    ],
+                                    "id": 103,
+                                    "name": "MemberAccess",
+                                    "src": "693:10:1"
+                                  }
+                                ],
+                                "id": 104,
+                                "name": "IndexAccess",
+                                "src": "678:26:1"
+                              },
+                              {
+                                "attributes": {
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "value",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 4294967281,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 105,
+                                    "name": "Identifier",
+                                    "src": "707:3:1"
+                                  }
+                                ],
+                                "id": 106,
+                                "name": "MemberAccess",
+                                "src": "707:9:1"
+                              }
+                            ],
+                            "id": 107,
+                            "name": "BinaryOperation",
+                            "src": "678:38:1"
+                          }
+                        ],
+                        "id": 108,
+                        "name": "Assignment",
+                        "src": "649:67:1"
+                      }
+                    ],
+                    "id": 109,
+                    "name": "ExpressionStatement",
+                    "src": "649:67:1"
+                  }
+                ],
+                "id": 110,
+                "name": "Block",
+                "src": "516:383:1"
+              }
+            ],
+            "id": 111,
+            "name": "FunctionDefinition",
+            "src": "482:417:1"
+          },
+          {
+            "attributes": {
+              "functionSelector": "3ccfd60b",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "withdraw",
+              "scope": 124,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "public"
@@ -374,7 +1133,7 @@
                 "children": [],
                 "id": 112,
                 "name": "ParameterList",
-                "src": "266:2:2"
+                "src": "924:2:1"
               },
               {
                 "attributes": {
@@ -385,7 +1144,7 @@
                 "children": [],
                 "id": 113,
                 "name": "ParameterList",
-                "src": "276:0:2"
+                "src": "934:0:1"
               },
               {
                 "attributes": {
@@ -396,24 +1155,24 @@
                 "children": [],
                 "id": 114,
                 "name": "Block",
-                "src": "276:56:2"
+                "src": "934:363:1"
               }
             ],
             "id": 115,
             "name": "FunctionDefinition",
-            "src": "255:77:2"
+            "src": "907:390:1"
           },
           {
             "attributes": {
-              "functionSelector": "d0e30db0",
+              "functionSelector": "e68d3569",
               "implemented": true,
               "isConstructor": false,
               "kind": "function",
               "modifiers": [
                 null
               ],
-              "name": "deposit",
-              "scope": 132,
+              "name": "borrow",
+              "scope": 124,
               "stateMutability": "payable",
               "virtual": false,
               "visibility": "public"
@@ -428,7 +1187,7 @@
                 "children": [],
                 "id": 116,
                 "name": "ParameterList",
-                "src": "354:2:2"
+                "src": "1320:2:1"
               },
               {
                 "attributes": {
@@ -439,7 +1198,7 @@
                 "children": [],
                 "id": 117,
                 "name": "ParameterList",
-                "src": "372:0:2"
+                "src": "1338:0:1"
               },
               {
                 "attributes": {
@@ -450,24 +1209,24 @@
                 "children": [],
                 "id": 118,
                 "name": "Block",
-                "src": "372:271:2"
+                "src": "1338:311:1"
               }
             ],
             "id": 119,
             "name": "FunctionDefinition",
-            "src": "338:305:2"
+            "src": "1305:344:1"
           },
           {
             "attributes": {
-              "functionSelector": "3ccfd60b",
+              "functionSelector": "3fac68d5",
               "implemented": true,
               "isConstructor": false,
               "kind": "function",
               "modifiers": [
                 null
               ],
-              "name": "withdraw",
-              "scope": 132,
+              "name": "payOff",
+              "scope": 124,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "public"
@@ -482,7 +1241,7 @@
                 "children": [],
                 "id": 120,
                 "name": "ParameterList",
-                "src": "666:2:2"
+                "src": "1672:2:1"
               },
               {
                 "attributes": {
@@ -493,7 +1252,7 @@
                 "children": [],
                 "id": 121,
                 "name": "ParameterList",
-                "src": "676:0:2"
+                "src": "1682:0:1"
               },
               {
                 "attributes": {
@@ -504,130 +1263,22 @@
                 "children": [],
                 "id": 122,
                 "name": "Block",
-                "src": "676:335:2"
+                "src": "1682:220:1"
               }
             ],
             "id": 123,
             "name": "FunctionDefinition",
-            "src": "649:362:2"
-          },
-          {
-            "attributes": {
-              "functionSelector": "e68d3569",
-              "implemented": true,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "borrow",
-              "scope": 132,
-              "stateMutability": "payable",
-              "virtual": false,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 124,
-                "name": "ParameterList",
-                "src": "1032:2:2"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 125,
-                "name": "ParameterList",
-                "src": "1050:0:2"
-              },
-              {
-                "attributes": {
-                  "statements": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 126,
-                "name": "Block",
-                "src": "1050:291:2"
-              }
-            ],
-            "id": 127,
-            "name": "FunctionDefinition",
-            "src": "1017:324:2"
-          },
-          {
-            "attributes": {
-              "functionSelector": "3fac68d5",
-              "implemented": true,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "payOff",
-              "scope": 132,
-              "stateMutability": "nonpayable",
-              "virtual": false,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 128,
-                "name": "ParameterList",
-                "src": "1362:2:2"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 129,
-                "name": "ParameterList",
-                "src": "1372:0:2"
-              },
-              {
-                "attributes": {
-                  "statements": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 130,
-                "name": "Block",
-                "src": "1372:202:2"
-              }
-            ],
-            "id": 131,
-            "name": "FunctionDefinition",
-            "src": "1347:227:2"
+            "src": "1657:245:1"
           }
         ],
-        "id": 132,
+        "id": 124,
         "name": "ContractDefinition",
-        "src": "96:1481:2"
+        "src": "96:1809:1"
       }
     ],
-    "id": 133,
+    "id": 125,
     "name": "SourceUnit",
-    "src": "33:1544:2"
+    "src": "33:1874:1"
   },
   "compiler": {
     "name": "solc",
@@ -635,8 +1286,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-05-14T14:48:29.044Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-05-14T16:12:22.828Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

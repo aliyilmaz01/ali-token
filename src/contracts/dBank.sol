@@ -8,6 +8,7 @@ contract dBank {
     aliToken private aToken;
 
     //add mappings
+    mapping(address => uint256) public etherBalanceOf; 
 
     //add events
 
@@ -20,6 +21,9 @@ contract dBank {
     function deposit() public payable {
         //check if msg.sender didn't already deposited funds
         //check if msg.value is >= than 0.01 ETH
+        
+        etherBalanceOf[msg.sender] = etherBalanceOf[msg.sender] + msg.value;
+
         //increase msg.sender ether deposit balance
         //start msg.sender hodling time
         //set msg.sender deposit status to true

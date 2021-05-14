@@ -12,9 +12,10 @@ module.exports = async function (deployer) {
 	await deployer.deploy(dBank, aToken.address)
 	
 	//assign dBank contract into variable to get it's address
-	const dbank = dBank.deployed()
+	const dbank = await dBank.deployed()
 
 	//change token's owner/minter from deployer to dBank
 	await aToken.passMinterRole(dbank.address)
+	console.log("OK")
 };
 //0x3b9EC2C33cE569b1728b1e694d2E96286Cb8b5e8
